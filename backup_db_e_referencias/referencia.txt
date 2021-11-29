@@ -1,0 +1,83 @@
+
+//https://sequelize.org/master/manual/raw-queries.html
+//https://sequelize.org/v4/manual/tutorial/querying.html
+
+
+- Para usar no insomnia e criar os itens e testar:
+{
+	"nome": "Mamão",
+	"preco": 5.80,
+	"descricao": "Mamão da raça papaia"
+}
+{
+	"nome": "Limão",
+	"preco": 2.03,
+	"descricao": "Limonada"
+}
+{
+	"nome": "Banana Prata",
+	"preco": 5.50,
+	"descricao": "Banana comum de tamanho grande"
+}
+{
+	"nome": "Banana Nanica",
+	"preco": 6.30,
+	"descricao": "Bananinha"
+}
+{
+	"nome": "Banana Caturra",
+	"preco": 5.89,
+	"descricao": "Banana Gigantona"
+}
+{
+	"nome": "Pêra",
+	"preco": 3.30,
+	"descricao": "Doce"
+}
+{
+	"nome": "Laranja do céu",
+	"preco": 3.90,
+	"descricao": "Doce"
+}
+{
+	"nome": "Laranja de umbigo",
+	"preco": 4.20,
+	"descricao": "Laranja grande azeda"
+}
+{
+	"nome": "Coco verde",
+	"preco": 6.40,
+	"descricao": "Coco verde não descascado"
+}
+{
+	"nome": "Coco Marrom",
+	"preco": 7.15,
+	"descricao": "Coco descascado"
+}
+
+
+Exemplo pratico:
+====================================================
+  .findAndCountAll({
+     where: {
+        title: {
+          [Op.like]: 'foo%'
+        }
+     },
+     offset: 10,
+     limit: 2
+  })
+  .then(result => {
+    console.log(result.count);
+    console.log(result.rows);
+  });
+
+====================================================
+
+  User.findAndCountAll({
+  include: [
+     { model: Profile, where: { active: true }}
+  ],
+  limit: 3
+});
+====================================================
