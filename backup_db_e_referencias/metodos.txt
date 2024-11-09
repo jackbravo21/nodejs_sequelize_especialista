@@ -1,5 +1,5 @@
 
-Esses três métodos são usados para acessar diferentes partes de uma solicitação HTTP no Node.js (com frameworks como Express). Cada um tem uma função específica:
+Esses quatro métodos são usados para acessar diferentes partes de uma solicitação HTTP no Node.js (com frameworks como Express). Cada um tem uma função específica:
 
 req.body:
 Descrição: Contém os dados enviados pelo cliente em uma solicitação HTTP com método POST ou PUT. Esses dados vêm do corpo da requisição e normalmente são usados para enviar dados em formatos como JSON.
