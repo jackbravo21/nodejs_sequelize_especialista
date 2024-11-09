@@ -23,5 +23,13 @@ router.post("/testedata", (req, res) => {
     res.json({postNome, postPreco, postDescricao});
 });
 
+router.get("/search", (req, res) => {
+    
+    //http://localhost:3000/test/search/?term=nodejs
+    const term = req.query.term;
+
+    console.log(`O termo de busca: ${term}`);
+    res.send(`O termo de busca: ${term}`);
+});
 
 module.exports = router;
